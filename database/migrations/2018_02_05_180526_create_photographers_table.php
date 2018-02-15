@@ -20,6 +20,14 @@ class CreatePhotographersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('image')->nullable();
+            $table->string('address')->nullable();
+            $table->string('postcode')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('religious')->nullable();
+            $table->string('price_range')->nullable();
         });
     }
 
