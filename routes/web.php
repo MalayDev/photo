@@ -23,8 +23,10 @@ Route::group(['middleware' => 'revalidate'],function(){
 
     Route::prefix('photographer')->group(function(){
         Route::get('/', 'PhotographerController@index')->name('photographer.dashboard');
-        Route::get('/login', 'Auth\PhotographerLoginController@showLoginForm')->name('photographer.login');
+        Route::get('/login', 'Auth\PhotographerLoginController@showLoginForm')->name('photographer.login');        
         Route::post('/login', 'Auth\PhotographerLoginController@login')->name('photographer.login.submit');
+        Route::get('/register', 'Auth\PhotographerRegisterController@showRegistrationForm')->name('photographer.register');
+        Route::post('/register', 'Auth\PhotographerRegisterController@register')->name('photographer.register.submit');
         Route::get('/logout', 'Auth\PhotographerLoginController@logout')->name('photographer.logout');
 
     });

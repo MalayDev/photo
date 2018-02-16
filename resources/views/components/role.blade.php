@@ -10,20 +10,20 @@
 
 @if(Auth::guard('photographer')->check())
     <p class="text-success">
-        Log in photographer
+        Log in Photographer
     </p>
 @else
     <p class="text-success">
-        Log out photographer
+        Log out Photographer
     </p>
 @endif
 
 @if(Auth::guard('admin')->check())
     <p class="text-success">
-        Log in admin
+        Log in Admin
     </p>
 @else
     <p class="text-success">
-        Log out admin
+        Log out Admin
     </p>
 @endif
